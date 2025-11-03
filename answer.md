@@ -70,15 +70,51 @@ Ans:
 
 2. a.
 
+由上述程式碼可知該程式是建立HTTP協議的服務
+
 Ans:
+```js
+switch (url) {
+    case '/':
+      answer = 'index.html';
+      break;
+    case '/calculator':
+      answer = 'index2.html';
+      break;
+    default:
+      answer = 'error.html';
+  }
+```
 
 <!--  請撰寫時，第一句話再寫一次  -->
 
 2. b.
 
-Ans:
+由上述程式碼可知使用者輸入的網址(req.url)就會執行不同區塊程式碼的顯示部分
 
-<!--  請撰寫時，第一句話再寫一次  -->
+Ans:
+```js
+switch(url){
+    // 如果 url 嚴格等於 '/'
+    case '/':
+      // 則將 answer 設為 'index1.html'
+      answer = 'index1.html';
+      // 停止執行 switch 語句，跳出區塊
+      break
+    
+    // 如果 url 嚴格等於 '/calculator'
+    case '/calculator':
+      // 則將 answer 設為 'index2.html'
+      answer = 'index2.html';
+      // 停止執行 switch 語句，跳出區塊
+      break;
+    
+    // 如果上述所有 case 都不匹配
+    default:
+      // 則將 answer 設為 'error.html' 作為預設值
+      answer = 'error.html';  
+}
+  ```
 
 2. c.
 
